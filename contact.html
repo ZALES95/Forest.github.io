@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Forest Group Company - skontaktuj się w sprawie parku</title>
+     <meta name="description"
+          content="Kontakt Forest Group Company w sprawie naszego parku. Skontaktuj się z nami na naszej stronie">
+     <meta name="keywords" content="park, kontakt, email, wiadomość, numer telefonu">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <script src="https://kit.fontawesome.com/f5d39d5d44.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+
+<body>
+
+     <nav class="nav">
+     <div class="wrapper">
+          <div class="nav__desktop">
+
+               <a class="nav__logo" href="Forest.github.io/index.html#home">
+                    <i class="fa-solid fa-tree"></i>
+                    <h2 class="nav__title">Forest</h2>
+               </a>
+
+               <div class="nav__list">
+                    <a href="Forest.github.io/index.html#home"
+                         class="nav__item link-hover home-link current-link link-hover-dark">Home</a>
+                    <a href="Forest.github.io/index.html#aboutus" class="nav__item link-hover aboutus-link">O nas</a>
+                    <a href="Forest.github.io/index.html#offers" class="nav__item link-hover offers-link">Oferta</a>
+                    <a href="Forest.github.io/contact.html" class="nav__item link-hover contact-link">Kontakt</a>
+               </div>
+
+          </div>
+
+          <div class="nav__mobile">
+               <div class="hamburger-menu"><i class="fa-solid fa-bars"></i></div>
+               <div class="cross-menu"><i class="fa-solid fa-xmark"></i></div>
+          </div>
+
+          <div class="nav__mobile-info">
+               <a href="Forest.github.io/index.html#home" class="nav__item-mobile link-hover-mobile home-link">Home</a>
+               <a href="Forest.github.io/index.html#aboutus" class="nav__item-mobile link-hover-mobile aboutus-link">O
+                    nas</a>
+               <a href="Forest.github.io/index.html#offers"
+                    class="nav__item-mobile link-hover-mobile offers-link">Oferta</a>
+               <a href="Forest.github.io/contact.html"
+                    class="nav__item-mobile link-hover-mobile contact-link">Kontakt</a>
+          </div>
+     </div>
+
+
+</nav>
+
+     <main>
+
+          <section class="contact white-section section" id="contact">
+
+               <div class="wrapper">
+                    <div class="contact__box" data-aos="fade-right">
+                         <h2 class="contact__header">Skontaktuj się z nami!</h2>
+                         <i class="fa-regular fa-message"></i>
+
+                         <form action="" class="contact__form">
+
+                              <label class="contact__label" for="name">Imię i nazwisko</label>
+                              <input class="contact__input" type="text" id="name">
+
+                              <label class="contact__label" for="email">E-mail</label>
+                              <input class="contact__input" type="email" id="email">
+
+                              <label class="contact__label" for="message">Wiadomość</label>
+                              <textarea class="contact__input contact__message" id="message"></textarea>
+
+                              <button class="contact__button">Wyślij</button>
+
+                         </form>
+
+                    </div>
+               </div>
+
+          </section>
+
+          <section class="map section">
+               <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.898268664441!2d19.890654851847064!3d50.088191521179795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1676051344806!5m2!1spl!2spl"
+                    allowfullscreen="true" class="map__map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </section>
+
+     </main>
+
+     <footer class="footer footer--second">
+     <div class="company">
+          <div class="wrapper">
+
+               <div class="company__logo">
+                    <i class="fa-solid fa-tree"></i>
+                    <h2 class="company__title">Forest</h2>
+               </div>
+
+               <div class="company__info">
+                    <div class="company__box">
+                         <h3 class="company__header">O nas</h3>
+                         <a href='#' class="company__text">Historia</a>
+                         <a href='#' class="company__text">Parki</a>
+                         <a href='#' class="company__text">Opinie</a>
+                    </div>
+                    <div class="company__box">
+                         <h3 class="company__header">Nasza firma</h3>
+                         <a href='#' class="company__text">Praca</a>
+                         <a href='#' class="company__text">Kadry</a>
+                         <a href='#' class="company__text">Zarząd</a>
+                    </div>
+                    <div class="company__box">
+                         <h3 class="company__header">Dokumenty</h3>
+                         <a href='#' class="company__text">Wnioski</a>
+                         <a href='#' class="company__text">Rezerwacje</a>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+
+     <p class="footer__info">&copy;<span class="year"></span> Forest Group Company Ltd.</p>
+</footer>
+
+
+
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+          AOS.init(
+               {
+
+                    startEvent: 'DOMContentLoaded',
+                    offset: 200,
+                    once: true
+
+               }
+          );
+     </script>
+
+     <script src="dist/js/contact.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,570 @@
+@use "../sass/colors" as *;
+@use "../sass/components" as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	font-family: "Montserrat", sans-serif;
+	color: $black;
+	background: $white;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+textarea {
+	resize: vertical;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// navigation
+
+.nav {
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: $white;
+	z-index: 10;
+
+	&__desktop {
+		display: none;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__logo {
+		display: flex;
+		color: $black;
+		font-size: 2.4rem;
+		margin-left: 5rem;
+
+		&:hover {
+			color: $black;
+		}
+
+		.fa-tree {
+			margin: 0;
+			font-size: 3rem;
+		}
+	}
+
+	&__title {
+		padding-left: 0.3em;
+		font-size: 3rem;
+		margin: 0;
+	}
+
+	&__list {
+		display: flex;
+		margin: 0;
+	}
+
+	&__item {
+		font-size: 1.6rem;
+		padding: 1.5em 2em;
+		cursor: pointer;
+		color: $black;
+	}
+
+	&__mobile-info {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $white;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 4rem;
+		display: none;
+	}
+
+	.nav-display {
+		display: flex;
+	}
+
+	&__item-mobile {
+		font-size: 3rem;
+		cursor: pointer;
+		color: $black;
+	}
+
+	&__mobile {
+		position: fixed;
+		display: flex;
+		padding: 0.8em 1em;
+		font-size: 3rem;
+		cursor: pointer;
+		z-index: 20;
+
+		.fa-bars {
+			color: $white;
+		}
+
+		.fa-xmark {
+			font-size: 4rem;
+		}
+	}
+}
+
+//header
+
+.header {
+	position: relative;
+	background-image: url("../img/jungla_min.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	z-index: 0;
+
+	&__shadow {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $bg-shadow;
+		z-index: -10;
+	}
+
+	&__desc {
+		padding: 15rem 0;
+		z-index: 5;
+		height: 100%;
+		color: $white;
+	}
+
+	&__name {
+		margin: 0;
+		margin-left: 5rem;
+		margin-right: 5rem;
+		margin-bottom: 0.1em;
+		font-size: 1.8rem;
+	}
+
+	&__main-title {
+		margin: 0;
+		margin-left: 5rem;
+		margin-right: 5rem;
+		font-weight: 700;
+		font-size: 3rem;
+	}
+}
+
+//aboutus
+
+.aboutus {
+	padding: 6rem 5rem;
+
+	&__title {
+		@include title;
+	}
+
+	&__content {
+		display: grid;
+		gap: 6rem;
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__header {
+		font-weight: 700;
+		font-size: 2rem;
+	}
+
+	&__desc {
+		font-size: 1.4rem;
+		margin-top: 1rem;
+		line-height: 2.4rem;
+	}
+}
+
+//adventure
+
+.adventure {
+	position: relative;
+	background-image: url("../img/dziecko_min.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	z-index: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__shadow {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $bg-shadow;
+		z-index: -10;
+	}
+
+	&__content {
+		margin: 9rem 2rem;
+		padding: 1.5rem 9rem;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 900px;
+		font-size: 3rem;
+		border: 2px solid $white;
+		z-index: 5;
+		color: $white;
+	}
+}
+
+// offers
+
+.offers {
+	padding: 6rem 5rem;
+
+	&--second {
+		padding-top: 12rem;
+		padding-bottom: calc(0.2 * 100vh);
+	}
+
+	&__title {
+		@include title;
+	}
+
+	&__info {
+		color: $black;
+		font-size: 1.8rem;
+		text-align: center;
+		margin-bottom: 3.6rem;
+		margin-top: -1rem;
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: 100%;
+		align-items: center;
+		gap: 2.5rem;
+		max-width: 900px;
+		margin: 0 auto;
+		flex-direction: column;
+	}
+
+	&__card {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		box-shadow: 0px 2px 4px 0px $gray;
+		border-radius: 0.5rem;
+		padding: 2.5rem;
+		min-width: 267px;
+		max-width: 267px;
+	}
+
+	&__price {
+		font-weight: 700;
+		font-size: 2.6rem;
+	}
+
+	&__dollar {
+		font-size: 3rem;
+		padding-right: 0.2rem;
+	}
+
+	&__list {
+		list-style-type: none;
+		margin-left: -1.6rem;
+	}
+
+	&__item {
+		font-size: 1.4rem;
+		margin: 0.4rem;
+	}
+
+	&__item--gray {
+		color: $gray;
+	}
+
+	.fa-check {
+		color: $button;
+		padding-right: 0.3rem;
+	}
+
+	&__button {
+		box-shadow: 0px 2px 4px 0px $gray;
+		outline: none;
+		padding: 0.6rem 4.6rem;
+		font-size: 1.4rem;
+		border-radius: 0.5rem;
+		background: $white;
+		transition: box-shadow 0.3s;
+		margin-top: 2rem;
+
+		&:hover {
+			box-shadow: 0px 4px 8px 0px $gray;
+		}
+	}
+
+	&__button--highlighted {
+		background: $button;
+		box-shadow: 0px 2px 4px 0px $button;
+
+		&:hover {
+			box-shadow: 0px 4px 8px 0px $button;
+		}
+	}
+
+	&__link-box {
+		font-size: 1.6rem;
+		margin: 0 auto;
+		margin-top: 3rem;
+		text-align: center;
+		max-width: 900px;
+	}
+
+	&__link {
+		padding: 1.5em 2em;
+		color: $black;
+
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+//contact
+
+.contact {
+	padding: 15rem 0;
+
+	.wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	.fa-message {
+		font-size: 3rem;
+		margin-top: -0.6rem;
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		box-shadow: 0px 2px 4px 0px $gray;
+		padding: 5rem;
+		min-width: 300px;
+		margin: 0 2rem;
+	}
+
+	&__header {
+		@include title;
+		font-size: 2.6rem;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+	}
+
+	&__input {
+		width: 100%;
+		margin: 1rem 0;
+		font-size: 1.6rem;
+		padding: 0.5rem;
+		outline: none;
+		box-shadow: 0px 2px 4px 0px $gray;
+		border: 1px solid $gray;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0px 4px 8px 0px $gray;
+		}
+	}
+
+	&__label {
+		font-size: 1.8rem;
+		margin-top: 1.5rem;
+	}
+
+	&__message {
+		resize: vertical;
+		max-height: 500px;
+		min-height: 150px;
+	}
+
+	&__button {
+		outline: none;
+		padding: 0.6rem 4.6rem;
+		font-size: 1.6rem;
+		border-radius: 0.5rem;
+		transition: box-shadow 0.3s;
+		background: $button;
+		box-shadow: 0px 2px 4px 0px $button;
+		margin-top: 3rem;
+		width: 70%;
+		align-self: center;
+		color: $black;
+
+		&:hover {
+			box-shadow: 0px 4px 8px 0px $button;
+		}
+	}
+}
+
+//map
+
+.map {
+	&__map {
+		width: 100vw;
+		height: 400px;
+		margin-bottom: -0.5rem;
+		border: none;
+		border-bottom: 2px solid rgb(148, 148, 148);
+	}
+}
+
+//footer
+
+.footer {
+	text-align: center;
+	background: $light-gray;
+
+	.company {
+		padding: 6rem 5rem;
+		border-bottom: 2px solid rgb(148, 148, 148);
+
+		.wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			text-align: center;
+			flex-direction: column;
+			max-width: 900px;
+		}
+
+		&__logo {
+			display: flex;
+			margin-left: 2.5rem;
+			margin-bottom: 4rem;
+
+			.fa-tree {
+				margin: 0;
+				font-size: 3.8rem;
+			}
+		}
+
+		&__title {
+			font-size: 3.8rem;
+			margin-left: 0.5rem;
+		}
+
+		&__info {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__box {
+			margin: 0 2.6rem;
+			min-width: 117px;
+		}
+
+		&__header {
+			font-weight: 700;
+			margin-bottom: 1rem;
+			line-height: 2.4rem;
+			font-size: 1.4rem;
+		}
+
+		&__text {
+			display: block;
+			color: $black;
+			margin: 1rem 0;
+			transition: text-shadow 0.3s ease-in-out;
+			font-size: 1.2rem;
+
+			&:hover {
+				color: $black;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+
+	&__info {
+		margin: 0;
+		padding: 2rem;
+		font-size: 1.2rem;
+	}
+
+	.year {
+		font-size: 1.1rem;
+	}
+}
+
+.current-link {
+	background-color: $black;
+	color: $white;
+}
+
+.hamburger-display {
+	display: none;
+}
+
+.cross-menu {
+	display: none;
+}
+
+.cross-display {
+	display: block;
+}
+
+@import "../sass/media";
+
+// Do poprawienia: ikony, favicon, cookies i inne potrzebne pliki do hostingu

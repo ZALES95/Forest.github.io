@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Forest Group Company - skontaktuj się w sprawie parku</title>
+     <meta name="description"
+          content="Kontakt Forest Group Company w sprawie naszego parku. Skontaktuj się z nami na naszej stronie">
+     <meta name="keywords" content="park, kontakt, email, wiadomość, numer telefonu">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <script src="https://kit.fontawesome.com/f5d39d5d44.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+
+<body>
+
+     <!-- @include 'nav.kit' -->
+
+     <main>
+
+          <section class="contact white-section section" id="contact">
+
+               <div class="wrapper">
+                    <div class="contact__box" data-aos="fade-right">
+                         <h2 class="contact__header">Skontaktuj się z nami!</h2>
+                         <i class="fa-regular fa-message"></i>
+
+                         <form action="" class="contact__form">
+
+                              <label class="contact__label" for="name">Imię i nazwisko</label>
+                              <input class="contact__input" type="text" id="name">
+
+                              <label class="contact__label" for="email">E-mail</label>
+                              <input class="contact__input" type="email" id="email">
+
+                              <label class="contact__label" for="message">Wiadomość</label>
+                              <textarea class="contact__input contact__message" id="message"></textarea>
+
+                              <button class="contact__button">Wyślij</button>
+
+                         </form>
+
+                    </div>
+               </div>
+
+          </section>
+
+          <section class="map section">
+               <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.898268664441!2d19.890654851847064!3d50.088191521179795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1676051344806!5m2!1spl!2spl"
+                    allowfullscreen="true" class="map__map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </section>
+
+     </main>
+
+     <!-- @include 'footer.kit' -->
+
+
+
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+          AOS.init(
+               {
+
+                    startEvent: 'DOMContentLoaded',
+                    offset: 200,
+                    once: true
+
+               }
+          );
+     </script>
+
+     <script src="dist/js/contact.min.js"></script>
+
+</body>
+
+</html>

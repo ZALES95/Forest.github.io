@@ -1,0 +1,112 @@
+@use "../sass/colors" as *;
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.link-hover {
+	position: relative;
+	transition: 0.3s;
+
+	&::after,
+	&::before {
+		position: absolute;
+		content: "";
+		bottom: 0.5em;
+		width: 0;
+		border-bottom: 2px solid $black;
+		transition: 0.3s;
+	}
+
+	&::after {
+		right: 50%;
+	}
+
+	&::before {
+		left: 50%;
+	}
+
+	&:hover {
+		color: $black;
+	}
+
+	&:hover::after,
+	&:hover::before {
+		width: 40%;
+	}
+}
+
+.link-hover-mobile {
+	position: relative;
+	transition: 0.3s;
+
+	&::after,
+	&::before {
+		position: absolute;
+		content: "";
+		bottom: -1rem;
+		width: 0;
+		border-bottom: 2px solid $black;
+		transition: 0.3s;
+	}
+
+	&::after {
+		right: 50%;
+	}
+
+	&::before {
+		left: 50%;
+	}
+
+	&:hover {
+		color: $black;
+	}
+
+	&:hover::after,
+	&:hover::before {
+		width: 50%;
+	}
+}
+
+.link-hover-dark {
+	position: relative;
+	transition: 0.3s;
+
+	&::after,
+	&::before {
+		position: absolute;
+		content: "";
+		bottom: 0.5em;
+		width: 0;
+		border-bottom: 2px solid $white;
+		transition: 0.3s;
+	}
+
+	&::after {
+		right: 50%;
+	}
+
+	&::before {
+		left: 50%;
+	}
+
+	&:hover {
+		color: $white;
+	}
+
+	&:hover::after,
+	&:hover::before {
+		width: 40%;
+	}
+}
+
+@mixin title {
+	color: $black;
+	letter-spacing: 1px;
+	font-size: 3.4rem;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 3.6rem;
+}

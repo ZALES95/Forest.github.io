@@ -1,0 +1,115 @@
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 67px;
+	}
+
+	.nav {
+		&__desktop {
+			display: flex;
+		}
+
+		&__mobile {
+			display: none;
+		}
+	}
+
+	.header {
+		background-image: url("../img/jungla_max.jpg");
+
+		&__name {
+			font-size: 2rem;
+		}
+
+		&__main-title {
+			font-size: 3.2rem;
+		}
+
+		&__desc {
+			padding: 22.2rem 0 15rem 0;
+		}
+	}
+
+	.aboutus {
+		&__content {
+			grid-template-columns: 11fr 12fr;
+		}
+
+		&__desc {
+			font-size: 1.6rem;
+			line-height: 3rem;
+		}
+
+		&__header {
+			font-size: 2.2rem;
+		}
+	}
+
+	.adventure {
+		background-image: url("../img/dziecko_max.jpg");
+
+		&__content {
+			padding: 2rem 18rem;
+			font-size: 4rem;
+		}
+	}
+
+	.footer {
+		.company {
+			.wrapper {
+				flex-direction: row;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.offers {
+		&__cards {
+			flex-direction: row;
+		}
+	}
+}
+
+@media (min-width: 968px) {
+	.offers {
+		&__link-box {
+			text-align: right;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.offers {
+		&__cards {
+			flex-direction: row;
+		}
+	}
+}
+
+@media (max-width: 370px) {
+	.offers {
+		padding: 6rem 0rem;
+	}
+
+     .adventure {
+          &__content {
+               margin: 9rem 2rem;
+               padding: 2rem 4rem;
+          }
+     }
+
+     .header {
+          &__name {
+               margin-left: 2rem;
+               margin-right: 2rem;
+               margin-bottom: 0.5em;
+               font-size: 1.6rem;
+          }
+     
+          &__main-title {
+               margin-left: 2rem;
+               margin-right: 2rem;
+               font-size: 2.6rem;
+          }
+     }
+}
